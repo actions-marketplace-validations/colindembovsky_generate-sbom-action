@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/colindembovsky/generate-sbom-action"><img alt="test status" src="https://github.com/colindembovsky/generate-sbom-action/actions/workflows/test.yml/badge.svg"></a>
+  <a href="https://github.com/advanced-security/generate-sbom-action"><img alt="test status" src="https://github.com/advanced-security/generate-sbom-action/actions/workflows/test.yml/badge.svg"></a>
 </p>
 
 # Generate SBOM Action
@@ -14,10 +14,10 @@ You can use the workflow as follows:
 gen-sbom:
   runs-on: ubuntu-latest
   steps:
-  - uses: actions/checkout@v3
-  - uses: colindemobvsky/generate-sbom-action@v1
+  - uses: actions/checkout@v4
+  - uses: advanced-security/generate-sbom-action@v1
     id: gensbom
-  - uses: actions/upload-artifact@v3
+  - uses: actions/upload-artifact@v4
     with:
       name: sbom
       path: ${{ steps.gensbom.outputs.fileName }}
